@@ -1,0 +1,40 @@
+.prefooter {
+	@apply bg-[linear-gradient(to_top,#141516,var(--color-bg-primary))] text-[var(--color-text-primary)];
+	padding-block: 96px;
+	font-family: var(--font-regular);
+}
+
+.layout__container {
+	@apply w-full mx-auto pl-[var(--page-padding-left)] pr-[var(--page-padding-right)] max-w-[calc(var(--page-max-width)+var(--page-padding-left)+var(--page-padding-right))];
+	/* max-width: ; */
+}
+
+.grid__container {
+	@apply flex justify-between flex-col md:flex-row gap-6;
+}
+
+.heading {
+	@apply text-[40px] leading-[44px] tracking-[-0.015em] font-medium;
+	font-variation-settings: 'opsz' 28;
+}
+
+.links__outter__container {
+	@apply flex items-end;
+}
+
+.links__inner__container {
+	@apply flex gap-4 items-center;
+}
+
+.get__started__link,
+.talk__to__sales {
+	@apply font-medium text-base leading-10 h-10 gap-[6px] px-4 rounded-[10px] transition-colors;
+}
+
+.get__started__link {
+	@apply bg-[#e6e6e6] hover:bg-white text-[var(--color-bg-primary)] shadow-[var(--shadow-stack-low)];
+}
+
+.talk__to__sales {
+	@apply bg-[var(--color-bg-quaternary)] text-[var(--color-text-primary)] shadow-[var(--shadow-stack-low)];
+}
