@@ -1,0 +1,17 @@
+.foundation {
+	@apply relative isolate py-40 block;
+}
+
+.container {
+	@apply w-full mx-auto pl-[var(--page-padding-left)] pr-[var(--page-padding-right)] max-w-[calc(var(--page-max-width)+var(--page-padding-left)+var(--page-padding-right))] bg-green-500;
+}
+
+.under__the__hood {
+	@apply hidden md:block absolute inset-0 overflow-hidden pointer-events-none;
+}
+
+.under__the__hood svg {
+	@apply block absolute left-1/2;
+	inset-block: 0;
+	margin: auto;
+}
