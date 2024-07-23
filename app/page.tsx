@@ -3,8 +3,8 @@ import { Button } from '@/components/ui/button'
 
 const Home: FC = () => {
 	return (
-		<div>
-			<Button> Click Me </Button>
+		<div className='bg-black min-h-screen flex justify-center items-center'>
+			<Button className='bg-white'> Click Me </Button>
 		</div>
 	)
 }
