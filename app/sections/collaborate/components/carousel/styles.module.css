@@ -25,6 +25,14 @@
 	min-width: max(var(--min-edge), var(--min-padding));
 }
 
-.card {
-	@apply w-[336px] aspect-[336/469] rounded-xl bg-red-500;
+.card__controls__container {
+	@apply mt-12 flex justify-center items-center gap-2;
+}
+
+.icon__button {
+	@apply flex justify-center items-center text-xs text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] rounded-full w-10 h-10 p-4 bg-[var(--color-bg-quaternary)] hover:brightness-[125%] transition-colors disabled:cursor-not-allowed;
+}
+
+.icon__button svg {
+	@apply flex-shrink-0;
 }
