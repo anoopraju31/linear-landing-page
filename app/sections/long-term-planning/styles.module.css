@@ -1,3 +1,38 @@
 .long__term__planning {
 	@apply overflow-x-hidden py-12 sm:py-[160px] isolate block;
 }
+
+.heading__container {
+	@apply grid grid-cols-8 md:grid-cols-12 gap-4 sm:gap-6;
+}
+
+.heading__inner__container {
+	@apply col-span-full md:col-span-8 flex flex-col gap-6;
+}
+
+.description__container {
+	@apply col-span-full md:col-span-5;
+}
+
+.description__container p {
+	@apply text-[17px] leading-[24.5px] tracking-normal font-medium text-[var(--color-text-tertiary)];
+}
+
+.description__container p span {
+	@apply text-[var(--color-text-primary)];
+}
+
+.hero__img__wrapper {
+	@apply relative pointer-events-none flex flex-col justify-center items-center;
+}
+.hero__img__wrapper::before {
+	@apply block content-[''] mt-[-8%];
+}
+
+.hero__img__wrapper::after {
+	@apply content-[''] block mb-[-3%];
+}
+
+.hero__img__wrapper img {
+	@apply w-[250vw] sm:w-[150vw] ml-[40vw] sm:ml-[10vw] md:ml-0  max-w-none md:max-w-[1600px] block h-full select-none [mask-image:radial-gradient(90%_50%_at_50%_50%,#d9d9d9_0,hsla(0,0%,45%,0)_100%)] md:[mask-image:radial-gradient(57%_57%_at_50%_35%,#d9d9d9_0,hsla(0,0%,45%,0)_100%)];
+}
