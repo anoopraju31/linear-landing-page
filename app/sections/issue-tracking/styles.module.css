@@ -21,3 +21,23 @@
 .heading__inner__container p span {
 	@apply text-[var(--color-text-primary)];
 }
+
+.hero__img__wrapper {
+	@apply relative pointer-events-none flex flex-col justify-center items-center;
+}
+.hero__img__wrapper::before {
+	@apply block content-[''] mt-[-4%];
+}
+
+.hero__img__wrapper::after {
+	@apply content-[''] block mb-[-6%];
+}
+
+.hero__img__wrapper img {
+	@apply w-[150vw] -ml-[20vw] md:ml-0 max-w-none md:max-w-[1600px] block h-full select-none;
+	mask-image: radial-gradient(
+		83.83% 83.84% at 50% 16.17%,
+		#d9d9d9 0,
+		hsla(0, 0%, 45%, 0) 80%
+	);
+}

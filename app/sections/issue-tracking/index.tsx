@@ -1,6 +1,7 @@
 import { type FC } from 'react'
 import styles from './styles.module.css'
 import SectionHeading from '@/components/sectionHeading'
+import Image from 'next/image'
 
 const IssueTracking: FC = () => {
 	return (
@@ -23,6 +24,15 @@ const IssueTracking: FC = () => {
 						</div>
 					</div>
 				</div>
+			</div>
+
+			<div className={styles.hero__img__wrapper}>
+				<Image
+					src='/issue-tracking-hero.png'
+					alt=''
+					width={3200}
+					height={1620}
+				/>
 			</div>
 		</section>
 	)
