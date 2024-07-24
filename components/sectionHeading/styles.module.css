@@ -1,3 +1,7 @@
+.section__heading {
+	@apply flex flex-col gap-4;
+}
+
 .badge__container {
 	@apply flex items-center gap-2;
 }

@@ -10,7 +10,7 @@ type Props = {
 
 const SectionHeading: FC<Props> = ({ badgeStyle, badgeText, heading }) => {
 	return (
-		<div>
+		<div className={styles.section__heading}>
 			<div className={styles.badge__container}>
 				<div className={cn(styles.badge, badgeStyle)}></div>
 				{/*  */}
