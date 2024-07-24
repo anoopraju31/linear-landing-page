@@ -1,7 +1,8 @@
 import { type FC } from 'react'
-import styles from './styles.module.css'
-import SectionHeading from '@/components/sectionHeading'
 import Image from 'next/image'
+import SectionHeading from '@/components/sectionHeading'
+import BentoGrid from './components/bento-grid'
+import styles from './styles.module.css'
 
 const IssueTracking: FC = () => {
 	return (
@@ -33,6 +34,10 @@ const IssueTracking: FC = () => {
 					width={3200}
 					height={1620}
 				/>
+			</div>
+
+			<div className={styles.container}>
+				<BentoGrid />
 			</div>
 		</section>
 	)
