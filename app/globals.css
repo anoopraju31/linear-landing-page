@@ -20,6 +20,7 @@
 
 body {
 	font-family: var(--regular-font);
+	background: var(--color-bg-primary);
 }
 
 :root {
@@ -183,6 +184,7 @@ body {
 		0px 3px 2px 0px rgba(0, 0, 0, 0.04), 0px 1px 1px 0px rgba(0, 0, 0, 0.07),
 		0px 0px 1px 0px rgba(0, 0, 0, 0.08);
 	--icon-grayscale-image-filter: grayscale(100%) brightness(400%);
+	--bento-border: hsla(0, 0%, 100%, 0.03);
 }
 
 @media (max-width: 768px) {

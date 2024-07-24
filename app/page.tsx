@@ -4,7 +4,7 @@ import Foundation from './sections/foundation'
 
 const Home: FC = () => {
 	return (
-		<main className='bg-black min-h-screen'>
+		<main className=' min-h-screen'>
 			<div className='h-screen'></div>
 			<Foundation />
 			<PreFooter />

@@ -4,6 +4,7 @@ import styles from './styles.module.css'
 import SectionHeading from '@/components/sectionHeading'
 import DefinitionList from './definitionList'
 import { foundationList } from '@/lib/constant'
+import FeatureList from './featureList'
 
 const Foundation: FC = () => {
 	return (
@@ -28,6 +29,11 @@ const Foundation: FC = () => {
 						<div className={styles.seperator} />
 
 						<DefinitionList data={foundationList} />
+					</div>
+
+					<div className={styles.feature__list__container}>
+						<div className={styles.seperator} />
+						<FeatureList />
 					</div>
 				</div>
 				{/* <div className='h-screen w-5/12'></div> */}

@@ -47,6 +47,22 @@
 	@apply text-[var(--color-text-tertiary)] text-pretty;
 }
 
+.feature__list__container {
+	@apply mt-10;
+}
+
+.feature__list {
+	@apply mt-8 grid grid-cols-2 md:grid-cols-4 gap-5;
+}
+
+.feature__card {
+	@apply flex flex-col gap-3;
+}
+
+.feature__card__title {
+	@apply text-[13px] leading-[19px] tracking-[-0.12px] text-[var(--color-text-tertiary)];
+}
+
 .under__the__hood {
 	@apply hidden md:block absolute inset-0 overflow-hidden pointer-events-none;
 }
