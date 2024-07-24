@@ -3,7 +3,48 @@
 }
 
 .container {
-	@apply w-full mx-auto pl-[var(--page-padding-left)] pr-[var(--page-padding-right)] max-w-[calc(var(--page-max-width)+var(--page-padding-left)+var(--page-padding-right))] bg-green-500;
+	@apply w-full mx-auto pl-[var(--page-padding-left)] pr-[var(--page-padding-right)] max-w-[calc(var(--page-max-width)+var(--page-padding-left)+var(--page-padding-right))];
+}
+
+.inner__container {
+	@apply w-full md:w-[40%] flex flex-col gap-6;
+}
+
+.heading__container {
+	@apply flex flex-col gap-6;
+}
+
+.heading__container p {
+	@apply text-[var(--color-text-tertiary)] text-balance text-[15px] leading-[23px] tracking-[-0.16px];
+}
+
+.list__container {
+	@apply mt-4;
+}
+
+.seperator {
+	@apply h-[2px] w-full bg-[var(--bento-border)] rounded-full;
+}
+
+.list {
+	@apply mt-6 grid sm:grid-cols-2 gap-x-12 gap-y-10;
+}
+
+.list__item {
+	@apply flex flex-col gap-2 sm:contents;
+}
+
+.item__label,
+.item__value {
+	@apply text-sm leading-[21px] tracking-[-0.18px];
+}
+
+.item__label {
+	@apply font-medium text-[var(--color-text-primary)];
+}
+
+.item__value {
+	@apply text-[var(--color-text-tertiary)] text-pretty;
 }
 
 .under__the__hood {

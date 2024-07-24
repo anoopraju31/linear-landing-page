@@ -140,3 +140,32 @@ export const footerSections: FooterSection[] = [
 		],
 	},
 ]
+
+export type FoundationListItem = {
+	id: string | number
+	label: string
+	value: string
+}
+
+export type FoundationList = FoundationListItem[]
+
+export const foundationList: FoundationList = [
+	{
+		id: 'foundation-1',
+		label: 'Linear Sync Engine',
+		value:
+			'Built with a high-performance architecture and an obsessive focus on speed.',
+	},
+	{
+		id: 'foundation-2',
+		label: 'Enterprise-ready security',
+		value:
+			'Best-in-class security practices keep your work safe and secure at every layer.',
+	},
+	{
+		id: 'foundation-3',
+		label: 'Engineered for scale',
+		value:
+			'Built for teams of all sizes. From early-stage startups to global enterprises.',
+	},
+]
