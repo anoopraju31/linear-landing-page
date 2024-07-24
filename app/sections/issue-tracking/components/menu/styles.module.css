@@ -1,0 +1,15 @@
+.menu {
+	@apply absolute top-[103px] left-[120px] min-w-[180px] backdrop-blur-md p-1 shadow-[var(--shadow-high)];
+
+	background: hsla(0, 0%, 100%, 0.1);
+	border: 1px solid hsla(0, 0%, 100%, 0.1);
+	border-radius: var(--radius-8);
+}
+
+.menu__item {
+	@apply flex items-center gap-2 h-8 rounded-[6px] px-2 text-[var(--color-text-tertiary)] hover:bg-[hsla(0,0%,100%,0.1)] hover:text-[var(--color-text-primary)] active:scale-95 active:bg-[hsla(0,0%,100%,0.08)] transition-all;
+}
+
+.menu__item__text {
+	@apply text-sm leading-[21px] tracking-[-0.18px];
+}

@@ -2,6 +2,7 @@ import { type FC } from 'react'
 import UserCard from '../user-card'
 import styles from './styles.module.css'
 import { userCards } from '@/lib/constant'
+import Menu from '../menu'
 
 const SecondCard: FC = () => {
 	return (
@@ -21,6 +22,8 @@ const SecondCard: FC = () => {
 					</div>
 				</div>
 			</div>
+
+			<Menu />
 		</div>
 	)
 }
