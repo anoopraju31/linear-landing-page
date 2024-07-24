@@ -1,4 +1,5 @@
-import { UserCardProps } from '@/app/sections/issue-tracking/components/user-card'
+import { type ReactNode } from 'react'
+import { type UserCardProps } from '@/app/sections/issue-tracking/components/user-card'
 
 type FooterListItem = {
 	id: string | number
