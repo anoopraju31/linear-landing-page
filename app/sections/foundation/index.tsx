@@ -1,10 +1,10 @@
 import { type FC } from 'react'
-import UnderTheHood from './underToHood.svg'
-import styles from './styles.module.css'
 import SectionHeading from '@/components/sectionHeading'
-import DefinitionList from './definitionList'
+import DefinitionList from './components/definitionList'
+import FeatureList from './components/featureList'
 import { foundationList } from '@/lib/constant'
-import FeatureList from './featureList'
+import UnderTheHood from '@/assets/underToHood.svg'
+import styles from './styles.module.css'
 
 const Foundation: FC = () => {
 	return (
@@ -36,7 +36,7 @@ const Foundation: FC = () => {
 						<FeatureList />
 					</div>
 				</div>
-				{/* <div className='h-screen w-5/12'></div> */}
+
 				<div className={styles.under__the__hood}>
 					<UnderTheHood />
 				</div>

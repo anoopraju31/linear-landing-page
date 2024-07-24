@@ -1,6 +1,6 @@
 import { type FC } from 'react'
 import { type FoundationList } from '@/lib/constant'
-import styles from './styles.module.css'
+import styles from '../styles.module.css'
 
 type Props = {
 	data: FoundationList
