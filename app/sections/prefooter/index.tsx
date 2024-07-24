@@ -1,11 +1,12 @@
 import { type FC } from 'react'
 import styles from './styles.module.css'
 import Link from 'next/link'
+import LayoutWrapper from '@/components/layout-wrapper'
 
 const PreFooter: FC = () => {
 	return (
 		<section className={styles.prefooter}>
-			<div className={styles.layout__container}>
+			<LayoutWrapper>
 				<div className={styles.grid__container}>
 					<div className=''>
 						<h3 className={styles.heading}>
@@ -28,7 +29,7 @@ const PreFooter: FC = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</LayoutWrapper>
 		</section>
 	)
 }

@@ -1,0 +1,3 @@
+.long__term__planning {
+	@apply overflow-x-hidden py-12 sm:py-[160px] isolate block;
+}

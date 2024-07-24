@@ -5,11 +5,12 @@ import FeatureList from './components/featureList'
 import { foundationList } from '@/lib/constant'
 import UnderTheHood from '@/assets/underToHood.svg'
 import styles from './styles.module.css'
+import LayoutWrapper from '@/components/layout-wrapper'
 
 const Foundation: FC = () => {
 	return (
 		<section className={styles.foundation}>
-			<div className={styles.container}>
+			<LayoutWrapper>
 				<div className={styles.inner__container}>
 					<div className={styles.heading__container}>
 						<SectionHeading
@@ -40,7 +41,7 @@ const Foundation: FC = () => {
 				<div className={styles.under__the__hood}>
 					<UnderTheHood />
 				</div>
-			</div>
+			</LayoutWrapper>
 		</section>
 	)
 }

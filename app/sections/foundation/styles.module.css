@@ -2,10 +2,6 @@
 	@apply relative isolate py-40 block;
 }
 
-.container {
-	@apply w-full mx-auto pl-[var(--page-padding-left)] pr-[var(--page-padding-right)] max-w-[calc(var(--page-max-width)+var(--page-padding-left)+var(--page-padding-right))];
-}
-
 .inner__container {
 	@apply w-full md:w-[40%] flex flex-col gap-6;
 }

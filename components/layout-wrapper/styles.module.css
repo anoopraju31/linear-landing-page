@@ -1,0 +1,3 @@
+.layout__wrapper {
+	@apply w-full mx-auto pl-[var(--page-padding-left)] pr-[var(--page-padding-right)] max-w-[calc(var(--page-max-width)+var(--page-padding-left)+var(--page-padding-right))];
+}

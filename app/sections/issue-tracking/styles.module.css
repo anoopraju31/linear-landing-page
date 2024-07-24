@@ -2,10 +2,6 @@
 	@apply block isolate overflow-hidden py-[48px] sm:py-[160px];
 }
 
-.container {
-	@apply w-full mx-auto pl-[var(--page-padding-left)] pr-[var(--page-padding-right)] max-w-[calc(var(--page-max-width)+var(--page-padding-left)+var(--page-padding-right))];
-}
-
 .heading__container {
 	@apply grid grid-cols-1 md:grid-cols-12;
 }

@@ -2,11 +2,12 @@ import { type FC } from 'react'
 import styles from './styles.module.css'
 import SectionHeading from '@/components/sectionHeading'
 import Carousel from './components/carousel'
+import LayoutWrapper from '@/components/layout-wrapper'
 
 const Collaborate: FC = () => {
 	return (
 		<section className={styles.collaborate}>
-			<div className={styles.container}>
+			<LayoutWrapper>
 				<div className={styles.heading__container}>
 					<div className={styles.heading__inner__container}>
 						<SectionHeading
@@ -24,7 +25,8 @@ const Collaborate: FC = () => {
 						</p>
 					</div>
 				</div>
-			</div>
+			</LayoutWrapper>
+
 			<div className={styles.carousel__container}>
 				<Carousel />
 			</div>

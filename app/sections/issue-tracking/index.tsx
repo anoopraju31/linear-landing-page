@@ -16,11 +16,12 @@ import SecondCard from './components/second-card'
 import WideCard from './components/wide-card'
 import BentoGridFeatureLookUpCard from '@/components/bento-grid/components/bento-grid-feature-lookup-card'
 import { issueTrackingFeatureLookup } from './feature-lookup-data'
+import LayoutWrapper from '@/components/layout-wrapper'
 
 const IssueTracking: FC = () => {
 	return (
 		<section className={styles.issue__tracking}>
-			<div className={styles.container}>
+			<LayoutWrapper>
 				<div className={styles.heading__container}>
 					<div className={styles.heading__inner__container}>
 						<SectionHeading
@@ -38,7 +39,7 @@ const IssueTracking: FC = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</LayoutWrapper>
 
 			<div className={styles.hero__img__wrapper}>
 				<Image
@@ -49,7 +50,7 @@ const IssueTracking: FC = () => {
 				/>
 			</div>
 
-			<div className={styles.container}>
+			<LayoutWrapper>
 				<BentoGrid>
 					<BentoGridTopLayer>
 						<BentoCardLeft
@@ -79,7 +80,7 @@ const IssueTracking: FC = () => {
 						))}
 					</BentoGridFeatureLookupWrapper>
 				</BentoGrid>
-			</div>
+			</LayoutWrapper>
 		</section>
 	)
 }
