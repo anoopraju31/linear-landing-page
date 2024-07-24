@@ -1,0 +1,93 @@
+.first__card {
+	@apply pointer-events-none select-none;
+
+	--mask-bottom: linear-gradient(
+		to bottom,
+		var(--mask-visible) 30%,
+		var(--mask-invisible) 80%
+	);
+	--mask-right: linear-gradient(
+		to right,
+		var(--mask-visible) 40%,
+		var(--mask-invisible) 90%
+	);
+
+	mask-image: var(--mask-bottom), var(--mask-right);
+	mask-composite: intersect;
+}
+
+.outter__container {
+	@apply relative p-2 rounded-[18px] h-full w-full;
+
+	--gradientBorder-size: 1px;
+	--gradientBorder-gradient: linear-gradient(
+		to bottom right,
+		hsla(0, 0%, 100%, 0.07),
+		transparent
+	);
+}
+
+.outter__container::before {
+	@apply content-[''] pointer-events-none select-none rounded-[18px] absolute top-0 left-0 right-0 bottom-0;
+
+	padding: var(--gradientBorder-size, 1px);
+	background: var(--gradientBorder-gradient);
+	mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+	mask-composite: exclude;
+}
+
+.inner__container {
+	@apply relative overflow-hidden isolate rounded-[10px] py-4 px-6;
+
+	--gradientBorder-size: 1px;
+	--gradientBorder-gradient: linear-gradient(
+		to bottom right,
+		hsla(0, 0%, 100%, 0.17),
+		transparent
+	);
+	background: linear-gradient(
+		134deg,
+		hsla(0, 0%, 100%, 0.08),
+		hsla(0, 0%, 100%, 0.02),
+		hsla(0, 0%, 100%, 0) 55%
+	);
+}
+
+.inner__container::before {
+	@apply content-[''] pointer-events-none select-none absolute top-0 left-0 right-0 bottom-0 p-[var(--gradientBorder-size,1px)] bg-[var(--gradientBorder-gradient)];
+
+	mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+	mask-composite: exclude;
+}
+
+.inner__container::after {
+	@apply content-[''] pointer-events-none absolute inset-0 opacity-10 mix-blend-overlay;
+}
+
+.text__container {
+	@apply flex flex-col gap-2;
+}
+
+.text__title {
+	@apply text-[15px] leading-[23px] tracking-[-0.16px] font-medium text-[var(--color-text-primary)];
+}
+
+.label__container {
+	@apply flex items-center gap-4 mb-5;
+}
+
+.label {
+	@apply flex items-center gap-2;
+}
+
+.label__title {
+	@apply text-[13px] leading-[19px] tracking-[-0.12px] text-[var(--color-text-tertiary)];
+}
+
+.label__marker {
+	@apply w-[6px] h-[6px] rounded-[1px];
+}
+
+.graph__container {
+	@apply mb-12;
+}
