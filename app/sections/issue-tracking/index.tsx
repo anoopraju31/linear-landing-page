@@ -1,8 +1,12 @@
 import { type FC } from 'react'
 import Image from 'next/image'
 import SectionHeading from '@/components/sectionHeading'
-import BentoGrid from './components/bento-grid'
+import { BentoGrid, BentoGridTopLayer } from '@/components/bento-grid'
 import styles from './styles.module.css'
+import BentoCardLeft from '@/components/bento-grid/components/bento-grid-card-left'
+import BentoGridCardRight from '@/components/bento-grid/components/bento-grid-card-right'
+import FirstCard from './components/first-card'
+import SecondCard from './components/second-card'
 
 const IssueTracking: FC = () => {
 	return (
@@ -37,7 +41,20 @@ const IssueTracking: FC = () => {
 			</div>
 
 			<div className={styles.container}>
-				<BentoGrid />
+				<BentoGrid>
+					<BentoGridTopLayer>
+						<BentoCardLeft
+							title='Build momentum with Cycles'
+							description='Create healthy routines and focus your team on what work should happen next.'>
+							<FirstCard />
+						</BentoCardLeft>
+						<BentoGridCardRight
+							title='Manage incoming work with Triage'
+							description='Review and assign incoming bug reports, feature requests, and other unplanned work.'>
+							<SecondCard />
+						</BentoGridCardRight>
+					</BentoGridTopLayer>
+				</BentoGrid>
 			</div>
 		</section>
 	)
