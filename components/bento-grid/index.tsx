@@ -12,3 +12,11 @@ export const BentoGrid: FC<Props> = ({ children }) => {
 export const BentoGridTopLayer: FC<Props> = ({ children }) => {
 	return <div className={styles.top__container}>{children}</div>
 }
+
+export const BentoGridWideCardWrapper: FC<Props> = ({ children }) => {
+	return <div className={styles.wide__card__wrapper}> {children} </div>
+}
+
+export const BentoGridSeperator: FC = () => {
+	return <div className={styles.bento__grid__seperator} />
+}
