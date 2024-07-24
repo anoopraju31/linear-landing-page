@@ -1,6 +1,7 @@
 import { type FC } from 'react'
 import styles from './styles.module.css'
 import SectionHeading from '@/components/sectionHeading'
+import Carousel from './components/carousel'
 
 const Collaborate: FC = () => {
 	return (
@@ -23,6 +24,9 @@ const Collaborate: FC = () => {
 						</p>
 					</div>
 				</div>
+			</div>
+			<div className={styles.carousel__container}>
+				<Carousel />
 			</div>
 		</section>
 	)

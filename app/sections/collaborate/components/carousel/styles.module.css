@@ -1,0 +1,30 @@
+.container {
+	--Carousel-gap: 8px;
+	@apply relative w-screen max-w-full left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-green-500;
+}
+
+.carousel__container {
+	@apply overflow-y-hidden overflow-x-scroll snap-always;
+	padding-block: calc(var(--focus-ring-width) + var(--focus-ring-offset));
+	scrollbar-width: none !important;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior-x: contain;
+}
+
+.carousel__inner__container {
+	@apply grid grid-flow-col gap-2 min-w-fit;
+}
+
+.carousel__inner__container::before,
+.carousel__inner__container::after {
+	content: '';
+	display: block;
+	--edge: calc((100vw - var(--page-max-width)) / 2);
+	--min-edge: calc(var(--edge) - var(--Carousel-gap));
+	--min-padding: calc(var(--page-padding-left) - var(--Carousel-gap));
+	min-width: max(var(--min-edge), var(--min-padding));
+}
+
+.card {
+	@apply w-[336px] aspect-[336/469] rounded-xl bg-red-500;
+}

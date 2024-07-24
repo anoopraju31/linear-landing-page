@@ -17,6 +17,11 @@
 .heading__text__container {
 	@apply self-end md:col-start-8 md:col-end-13;
 }
+
 .heading__text__container p {
 	@apply text-[17px] leading-[24.5px] tracking-[0.01em] font-[var(--font-weight-medium)] text-[var(--color-text-tertiary)] text-balance;
+}
+
+.carousel__container {
+	@apply mt-12;
 }
