@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+	font-family: Linear;
+	font-weight: 400 800;
+	font-display: block;
+	src: url('/static/fonts/inter-var-4-latin.woff2') format('woff2');
+}
+/* 
+@font-face {
+	font-family: Linear;
+	font-weight: 400 800;
+	font-display: swap;
+	font-style: italic;
+	src: url(https://static.linear.app/fonts/Inter-italic.var.woff2)
+		format('woff2');
+} */
+
+body {
+	font-family: var(--regular-font);
+}
+
 :root {
 	--header-height: 64px;
 	--header-blur: 12px;
