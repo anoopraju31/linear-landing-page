@@ -1,0 +1,29 @@
+.user__card {
+	@apply relative p-[10px] rounded-[6px] border;
+	border-color: hsla(0, 0%, 100%, 0.1);
+	background: hsla(0, 0%, 100%, 0.05);
+}
+
+.user__card__container {
+	@apply flex flex-col gap-[6px];
+}
+
+.user__card__title {
+	@apply text-sm leading-[21px] tracking-[-0.18px] overflow-hidden whitespace-nowrap;
+}
+
+.user__card__inner__container {
+	@apply flex items-center gap-2;
+}
+
+.user__card__img {
+	@apply flex relative items-center justify-center;
+}
+
+.user__card__img img {
+	@apply w-[18px] h-[18px] aspect-square flex-shrink-0 rounded-full pointer-events-none;
+}
+
+.user__card__name {
+	@apply text-sm leading-[21px] tracking-[-0.18px] font-medium text-[var(--color-text-quaternary)];
+}
