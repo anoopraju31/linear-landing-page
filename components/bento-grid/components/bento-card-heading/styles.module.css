@@ -1,0 +1,11 @@
+.card__heading {
+	@apply flex flex-col gap-1;
+}
+
+.card__heading h3 {
+	@apply text-[21px] leading-[28px] tracking-[-0.037em] font-medium text-[var(--color-text-primary)] text-balance;
+}
+
+.card__heading p {
+	@apply text-[17px] leading-[24.5px] tracking-normal text-[var(--color-text-tertiary)]  text-balance;
+}
