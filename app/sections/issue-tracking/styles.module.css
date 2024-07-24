@@ -1,0 +1,23 @@
+.issue__tracking {
+	@apply block isolate overflow-hidden py-[48px] sm:py-[160px];
+}
+
+.container {
+	@apply w-full mx-auto pl-[var(--page-padding-left)] pr-[var(--page-padding-right)] max-w-[calc(var(--page-max-width)+var(--page-padding-left)+var(--page-padding-right))];
+}
+
+.heading__container {
+	@apply grid grid-cols-1 md:grid-cols-12;
+}
+
+.heading__inner__container {
+	@apply md:col-span-8 lg:col-span-6 flex flex-col gap-6;
+}
+
+.heading__inner__container p {
+	@apply text-balance text-[17px] leading-[24.5px] tracking-normal font-medium text-[var(--color-text-tertiary)];
+}
+
+.heading__inner__container p span {
+	@apply text-[var(--color-text-primary)];
+}
