@@ -1,0 +1,22 @@
+.collaborate {
+	@apply block isolate py-[48px] sm:py-[160px] bg-[linear-gradient(180deg,rgba(97,106,115,0),rgba(97,106,115,.05)_40%,rgba(97,106,115,.05)_80%,rgba(97,106,115,0))];
+}
+
+.container {
+	@apply w-full mx-auto pl-[var(--page-padding-left)] pr-[var(--page-padding-right)] max-w-[calc(var(--page-max-width)+var(--page-padding-left)+var(--page-padding-right))];
+}
+
+.heading__container {
+	@apply grid md:grid-cols-12 gap-4 md:gap-6 mb-12;
+}
+
+.heading__inner__container {
+	@apply md:col-span-6;
+}
+
+.heading__text__container {
+	@apply self-end md:col-start-8 md:col-end-13;
+}
+.heading__text__container p {
+	@apply text-[17px] leading-[24.5px] tracking-[0.01em] font-[var(--font-weight-medium)] text-[var(--color-text-tertiary)] text-balance;
+}
