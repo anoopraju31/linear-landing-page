@@ -1,3 +1,5 @@
+import { UserCardProps } from '@/app/sections/issue-tracking/components/user-card'
+
 type FooterListItem = {
 	id: string | number
 	link: string
@@ -167,5 +169,27 @@ export const foundationList: FoundationList = [
 		label: 'Engineered for scale',
 		value:
 			'Built for teams of all sizes. From early-stage startups to global enterprises.',
+	},
+]
+
+export const userCards: UserCardProps[] = [
+	{
+		id: 'user-card-1',
+		title: 'Users report unexpected rate limiting',
+		img: '/user-1.png',
+		name: 'Tom',
+	},
+	{
+		id: 'user-card-2',
+		title: 'RangeError: Index 0 out of range',
+		img: '/user-2.jpg',
+		name: 'Romain',
+	},
+	{
+		id: 'user-card-3',
+		title:
+			'Pressing "Enter" quickly when logging in via email generates multiple emails',
+		img: '/user-3.jpg',
+		name: 'Tuomas',
 	},
 ]
