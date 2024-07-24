@@ -1,0 +1,16 @@
+.badge__container {
+	@apply flex items-center gap-2;
+}
+
+.badge__container .badge {
+	@apply border border-[var(--color-text-quaternary)] w-[14px] h-2 rounded-full;
+}
+
+.badge__container .badge__text {
+	@apply text-[var(--color-text-secondary)] text-sm leading-[21px] tracking-[-0.18px] font-medium;
+}
+
+.heading {
+	@apply text-balance text-[40px] sm:text-[56px] leading-[44px] sm:leading-[1.1] tracking-[-0.015em] sm:tracking-[-0.0325em] font-medium text-[var(--color-text-primary)];
+	font-variation-settings: 'opsz' 28;
+}
