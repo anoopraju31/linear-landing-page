@@ -4,6 +4,20 @@ import LayoutWrapper from '@/components/layout-wrapper'
 import SectionHeading from '@/components/sectionHeading'
 import Link from 'next/link'
 import Image from 'next/image'
+import {
+	BentoGrid,
+	BentoGridFeatureLookupWrapper,
+	BentoGridSeperator,
+	BentoGridTopLayer,
+	BentoGridWideCardWrapper,
+} from '@/components/bento-grid'
+import BentoCardLeft from '@/components/bento-grid/components/bento-grid-card-left'
+import BentoGridCardRight from '@/components/bento-grid/components/bento-grid-card-right'
+import BentoGridFeatureLookUpCard from '@/components/bento-grid/components/bento-grid-feature-lookup-card'
+import { longTermFeatureLookup } from './feature-lookup-data'
+import FirstCard from './components/first-card'
+import SecondCard from './components/second-card'
+import WideCard from './components/wide-card'
 
 const LongTermPlanning: FC = () => {
 	return (
@@ -32,6 +46,38 @@ const LongTermPlanning: FC = () => {
 			<div className={styles.hero__img__wrapper}>
 				<Image src='/roadmap.png' alt='' width={3200} height={1620} />
 			</div>
+
+			<LayoutWrapper>
+				<BentoGrid>
+					<BentoGridTopLayer>
+						<BentoCardLeft
+							title='Manage projects end-to-end'
+							description='Consolidate specs, milestones, tasks, and other documentation in one centralized location.'>
+							<FirstCard />
+						</BentoCardLeft>
+						<BentoGridCardRight
+							title='Project updates'
+							description='Communicate progress and project health with built-in project updates.'>
+							<SecondCard />
+						</BentoGridCardRight>
+					</BentoGridTopLayer>
+
+					<BentoGridWideCardWrapper>
+						<WideCard />
+					</BentoGridWideCardWrapper>
+
+					<BentoGridSeperator />
+
+					<BentoGridFeatureLookupWrapper>
+						{longTermFeatureLookup.map((featureLookup) => (
+							<BentoGridFeatureLookUpCard
+								key={featureLookup.id}
+								{...featureLookup}
+							/>
+						))}
+					</BentoGridFeatureLookupWrapper>
+				</BentoGrid>
+			</LayoutWrapper>
 		</section>
 	)
 }
