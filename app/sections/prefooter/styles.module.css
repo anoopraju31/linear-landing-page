@@ -14,7 +14,7 @@
 }
 
 .heading {
-	@apply text-[40px] leading-[44px] tracking-[-0.015em] font-medium;
+	@apply text-[40px] sm:text-[56px] leading-[44px] sm:leading-[1.1] tracking-[-0.015em] sm:tracking-[-0.0325em] font-medium;
 	font-variation-settings: 'opsz' 28;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .links__inner__container {
-	@apply flex gap-4 items-center;
+	@apply flex gap-2 items-center;
 }
 
 .get__started__link,
