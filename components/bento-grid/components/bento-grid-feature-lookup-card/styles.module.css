@@ -1,0 +1,19 @@
+.bento__grid__feature__lookup__card {
+	@apply flex flex-col gap-2;
+}
+
+.bento__grid__feature__lookup__card .title__container {
+	@apply flex items-center gap-2;
+}
+
+.bento__grid__feature__lookup__card .title__container svg {
+	@apply flex-shrink-0 fill-[var(--color-text-secondary)];
+}
+
+.bento__grid__feature__lookup__card .title__container h4 {
+	@apply text-sm leading-[21px] tracking-[-0.18px] font-medium text-[var(--color-text-secondary)];
+}
+
+.bento__grid__feature__lookup__card .description {
+	@apply text-[var(--color-text-tertiary)] text-pretty text-sm leading-[21px] tracking-[-0.18px];
+}
