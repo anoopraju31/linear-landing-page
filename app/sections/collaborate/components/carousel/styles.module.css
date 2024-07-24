@@ -1,6 +1,6 @@
 .container {
 	--Carousel-gap: 8px;
-	@apply relative w-screen max-w-full left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] bg-green-500;
+	@apply relative w-screen max-w-full left-1/2 right-1/2 -ml-[50vw] -mr-[50vw];
 }
 
 .carousel__container {

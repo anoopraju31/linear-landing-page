@@ -1,5 +1,6 @@
 import { type FC } from 'react'
 import styles from './styles.module.css'
+import CarouselCard from '../carouselCard'
 
 const Carousel: FC = () => {
 	return (
@@ -7,13 +8,13 @@ const Carousel: FC = () => {
 			<div>
 				<div className={styles.carousel__container}>
 					<div className={styles.carousel__inner__container}>
-						<div className={styles.card}></div>
-						<div className={styles.card}></div>
-						<div className={styles.card}></div>
-						<div className={styles.card}></div>
-						<div className={styles.card}></div>
-						<div className={styles.card}></div>
-						<div className={styles.card}></div>
+						<CarouselCard />
+						<CarouselCard />
+						<CarouselCard />
+						<CarouselCard />
+						<CarouselCard />
+						<CarouselCard />
+						<CarouselCard />
 					</div>
 				</div>
 			</div>
