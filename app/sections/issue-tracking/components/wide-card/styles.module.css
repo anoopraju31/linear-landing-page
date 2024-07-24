@@ -1,0 +1,41 @@
+.wide__card {
+	@apply grid grid-cols-8 md:grid-cols-12 gap-6;
+}
+
+.wide__card .heading__wrapper {
+	@apply z-10 col-start-1 col-end-6 row-start-1 row-end-1;
+}
+
+.head__container {
+	@apply flex flex-col gap-6;
+}
+
+.wide__card .heading__wrapper .link {
+	@apply w-fit h-8 inline-flex justify-center items-center select-none font-medium text-[13px] px-3 gap-1 rounded-lg bg-[var(--color-bg-quaternary)] shadow-[var(--shadow-stack-low)] text-[var(--color-text-tertiary)] hover:brightness-[125%] hover:text-[var(--color-text-primary)] transition-colors;
+}
+
+.wide__card .img__container {
+	@apply pointer-events-none relative overflow-hidden col-span-full row-start-auto md:row-start-1 md:row-end-1;
+}
+
+.wide__card .img__container img {
+	@apply max-w-none w-[250%] md:w-[150%] h-auto ml-[-100%] md:ml-[-15%] mb-[-25%] select-none;
+}
+
+.wide__card .img__container::after {
+	@apply content-[''] absolute inset-0;
+
+	background: linear-gradient(
+			to bottom,
+			transparent 70%,
+			var(--color-bg-primary) 100%
+		),
+		linear-gradient(
+			to right,
+			var(--color-bg-primary) 0,
+			transparent 20%,
+			transparent 80%,
+			var(--color-bg-primary) 100%
+		),
+		linear-gradient(150deg, var(--color-bg-primary) 20%, transparent 30%);
+}
