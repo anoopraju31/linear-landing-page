@@ -1,5 +1,5 @@
 .bento__grid .top__container {
-	@apply grid grid-cols-1 md:grid-cols-2 border-t-2 border-b-2 border-[var(--bento-border)];
+	@apply grid gap-6 grid-cols-1 md:grid-cols-2 border-t-2 border-b-2 border-[var(--bento-border)];
 }
 
 .bento__grid .wide__card__wrapper {
