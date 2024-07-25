@@ -1,0 +1,21 @@
+.tab__body {
+	@apply col-start-1 col-end-5 md:col-start-5 md:col-end-13;
+}
+
+.tab__body .tab__body__container {
+	@apply relative p-0 md:ps-6 md:pe-6 w-fit overflow-hidden ms-auto me-auto md:ms-0 md:me-0 md:ml-auto;
+}
+
+.tab__body .tab__body__container::after {
+	@apply content-[''] pointer-events-none absolute inset-0;
+	background: linear-gradient(
+		to bottom,
+		transparent 80%,
+		var(--color-bg-primary) 97%
+	);
+}
+
+.tab__body .tab__body__inner__container {
+	@apply absolute ml-16 sm:ms-auto sm:me-auto top-[100px] max-w-[70vw] sm:max-w-[360px];
+	inset-inline: 0;
+}
