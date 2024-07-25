@@ -1,0 +1,21 @@
+.test__to__issue__commands {
+	@apply relative;
+}
+
+.test__to__issue__commands .icon__container {
+	--icon-text: rgba(104, 204, 88, 1);
+	--icon-bg: rgba(34, 54, 32, 0.5);
+	@apply mb-8 flex justify-center items-center w-9 h-9 rounded-lg bg-[var(--icon-bg)] text-[var(--icon-text)];
+}
+
+.test__to__issue__commands .icon__container svg {
+	@apply flex-shrink-0 fill-[var(--icon-text)];
+}
+
+.test__to__issue__commands .heading {
+	@apply text-[17px] leading-6 tracking-[-0.22px] font-medium mb-3 text-[var(--color-text-primary)];
+}
+
+.test__to__issue__commands .description {
+	@apply text-[15px] leading-[23px] tracking-[-0.16px] text-[var(--color-text-tertiary)];
+}
