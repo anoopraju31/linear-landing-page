@@ -1,0 +1,33 @@
+.carousel__card {
+	@apply snap-center;
+}
+
+.carousel__card .outter__container {
+	@apply text-left relative isolate flex flex-col justify-end overflow-hidden py-8 px-[28px] h-[360px] aspect-[336/360] rounded-[30px] bg-[var(--color-bg-primary)] hover:brightness-[170%];
+
+	transition: filter 0.2s ease-out;
+}
+
+.carousel__card .img__container {
+	@apply h-auto max-w-full;
+}
+
+.carousel__card .img__container img {
+	@apply w-full;
+}
+
+.text__container {
+	@apply flex justify-between items-center w-full;
+}
+
+.text__container .title span {
+	@apply inline-block text-[var(--color-text-primary)] text-balance align-top;
+}
+
+.text__container .icon__container {
+	@apply border-2 border-[var(--color-bg-secondary)] flex justify-center items-center bg-[var(--color-bg-secondary)] text-[var(--color-text-tertiary)] font-medium text-[15px] leading-[40px] w-10 h-10 px-4 rounded-full hover:text-[var(--color-text-primary)] hover:border-[var(--color-bg-tertiary)] hover:bg-[var(--color-bg-tertiary)] active:scale-[0.97] active:border-[var(--color-bg-quaternary)] active:bg-[var(--color-bg-quaternary)] active:will-change-transform;
+}
+
+.text__container .icon__container svg {
+	@apply flex-shrink-0;
+}
