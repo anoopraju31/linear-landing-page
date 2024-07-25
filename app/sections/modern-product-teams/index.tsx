@@ -1,6 +1,7 @@
 import { type FC } from 'react'
 import LayoutWrapper from '@/components/layout-wrapper'
 import SectionHeading from './components/section-heading'
+import Carousel from './components/carousel'
 import styles from './styles.module.css'
 
 const ModernProductTeams: FC = () => {
@@ -9,6 +10,8 @@ const ModernProductTeams: FC = () => {
 			<LayoutWrapper>
 				<SectionHeading />
 			</LayoutWrapper>
+
+			<Carousel />
 		</section>
 	)
 }
