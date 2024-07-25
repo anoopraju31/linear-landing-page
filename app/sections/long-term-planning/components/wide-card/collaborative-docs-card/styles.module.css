@@ -1,0 +1,81 @@
+.collaborative__docs {
+	@apply relative;
+}
+
+.collaborative__docs .icons__container {
+	--icon-text: rgba(104, 204, 88, 1);
+	--icon-bg: rgba(34, 54, 32, 0.5);
+	@apply flex items-center justify-center w-9 h-9 mb-8 bg-[var(--icon-bg)] text-[var(--icon-text)] rounded-lg;
+}
+
+.collaborative__docs .heading {
+	@apply block mb-3 text-[17px] leading-[24px] tracking-[-0.22px] font-medium text-[var(--color-text-primary)];
+}
+
+.collaborative__docs .heading .editor__remote__selection {
+	--selection-bg: rgba(104, 204, 88, 0.2);
+	--selection-border: rgba(44, 144, 28, 1);
+
+	@apply pointer-events-none relative bg-[var(--selection-bg)] border border-[var(--selection-border)];
+	padding-inline: 2px;
+	margin-inline: -2px;
+	border-radius: 4px 1px 1px 4px;
+}
+
+.collaborative__docs .heading .remote__selection__cursor {
+	@apply select-none pointer-events-none relative;
+	word-break: normal;
+	--cursor-color: rgba(44, 144, 28, 1);
+}
+
+.collaborative__docs .heading .remote__selection__cursor::before {
+	@apply content-[''] absolute w-[2px];
+	inset: -1px auto -1px 0;
+	background: var(--cursor-color);
+	border-radius: var(--radius-rounded);
+}
+
+.collaborative__docs .heading .editor__remote__label {
+	@apply block absolute top-[-14px] left-0;
+}
+
+.collaborative__docs .heading .editor__remote__name {
+	@apply block rounded-sm rounded-bl-none text-[10px] leading-[14px] h-[14px] select-none whitespace-nowrap text-white text-center px-1 bg-[var(--cursor-color)];
+}
+
+.collaborative__docs .heading .editor__remote__name::before {
+	@apply content-[''] absolute bg-transparent -bottom-1 left-[2px] h-1 w-[2px] rounded-tl-sm;
+	box-shadow: 0 -2px 0 0 var(--cursor-color);
+}
+
+.collaborative__docs .paragraph {
+	@apply text-[var(--color-text-tertiary)] text-[15px] leading-[23px] tracking-[-0.16px] block mb-6;
+}
+
+.collaborative__docs .remote__cursor {
+	@apply select-none pointer-events-none relative;
+	word-break: normal;
+	--cursor-color: rgba(94, 106, 210, 1);
+}
+
+.collaborative__docs .remote__cursor::before {
+	@apply content-[''] absolute w-[2px] bg-[var(--cursor-color)] rounded-full;
+	inset: -1px auto -1px 0;
+}
+
+.collaborative__docs .remote__label {
+	@apply block absolute top-[-14px] left-0;
+}
+
+.collaborative__docs .remote__name {
+	@apply block rounded-sm rounded-bl-none text-[10px] leading-[14px] h-[14px] select-none text-white whitespace-nowrap text-center px-1 bg-[var(--cursor-color)];
+}
+
+.collaborative__docs .remote__name::before {
+	@apply content-[''] absolute bg-transparent -bottom-1 left-[2px] h-1 w-[2px] rounded-tl-sm;
+	box-shadow: 0 -2px 0 0 var(--cursor-color);
+}
+
+.collaborative__docs .paragraph .hightlight {
+	@apply text-[var(--color-text-quaternary)];
+}
