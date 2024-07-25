@@ -26,7 +26,7 @@ const popIn = {
 			type: 'spring',
 			duration: 1,
 			scale: { duration: 0.8 },
-			filter: { duration: 0.4 },
+			// filter: { duration: 0.4 },
 		},
 	},
 	exit: {
@@ -37,7 +37,7 @@ const popIn = {
 			ease: 'easeIn',
 			duration: 0.7,
 			scale: { duration: 0.7 },
-			filter: { duration: 0.3, delay: 0.4 },
+			// filter: { duration: 0.3, delay: 0.4 },
 		},
 	},
 }
