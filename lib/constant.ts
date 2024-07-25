@@ -1,5 +1,6 @@
 import { type ReactNode } from 'react'
 import { type UserCardProps } from '@/app/sections/issue-tracking/components/user-card'
+import { CarouselCardProps } from '@/app/sections/modern-product-teams/components/carousel-card'
 
 type FooterListItem = {
 	id: string | number
@@ -192,5 +193,23 @@ export const userCards: UserCardProps[] = [
 			'Pressing "Enter" quickly when logging in via email generates multiple emails',
 		img: '/user-3.jpg',
 		name: 'Tuomas',
+	},
+]
+
+export const modernProductCards: CarouselCardProps[] = [
+	{
+		id: 'modern-carousel-card-1',
+		img: '/product-development.jpeg',
+		title: 'Purpose-built for product development',
+	},
+	{
+		id: 'modern-carousel-card-2',
+		img: '/fast-moving.avif',
+		title: 'Designed to move fast',
+	},
+	{
+		id: 'modern-carousel-card-3',
+		img: '/perfection.avif',
+		title: 'Crafted to perfection',
 	},
 ]
