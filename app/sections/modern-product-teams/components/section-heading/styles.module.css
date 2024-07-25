@@ -1,0 +1,20 @@
+.top__container {
+	@apply grid grid-cols-4 md:grid-cols-12 gap-6 mb-12;
+}
+
+.top__container .heading {
+	@apply col-start-1 col-end-5 md:col-end-13 lg:col-end-7;
+}
+
+.top__container .heading h2 {
+	@apply text-balance text-[40px] sm:text-[56px] leading-[44px] sm:leading-[1.1] font-medium tracking-[-0.015em] sm:tracking-[-0.0325em] text-[var(--color-text-primary)];
+	font-variation-settings: 'opsz' 28;
+}
+
+.top__container .description {
+	@apply col-start-1 col-end-5 md:col-end-9 lg:col-start-7 lg:col-end-13 self-end;
+}
+
+.top__container .description p {
+	@apply text-balance text-[17px] leading-[24.5px] font-medium text-[var(--color-text-tertiary)];
+}
