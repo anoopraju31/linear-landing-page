@@ -1,0 +1,19 @@
+.customer__grid {
+	@apply relative grid grid-cols-1 place-items-center cursor-pointer;
+}
+
+.customer__grid .logo__grid {
+	@apply grid grid-cols-3 gap-x-6 gap-y-12 w-full place-items-center fill-[var(--color-text-primary)];
+}
+
+.grid__item {
+	@apply relative flex flex-col w-full h-full overflow-hidden aspect-[8/2];
+}
+
+.grid__item .item {
+	@apply flex justify-center items-center min-h-full gap-6 absolute inset-0;
+}
+
+.grid__item .item svg {
+	@apply fill-[var(--color-text-primary)] w-[150px] h-auto flex-shrink-0;
+}
