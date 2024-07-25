@@ -15,9 +15,9 @@ const TabBody: FC<Props> = ({ currentTab }) => {
 			<div className={styles.tab__body__container}>
 				<EditorContent />
 				<div className={styles.tab__body__inner__container}>
-					{/* <CollaborativeDocsCard /> */}
-					{/* <InlineComments /> */}
-					<TextToIssueCommands />
+					{currentTab === 'tab-header-1' && <CollaborativeDocsCard />}
+					{currentTab === 'tab-header-2' && <InlineComments />}
+					{currentTab === 'tab-header-3' && <TextToIssueCommands />}
 				</div>
 			</div>
 		</div>
