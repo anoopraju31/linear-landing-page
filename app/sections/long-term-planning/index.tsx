@@ -62,6 +62,8 @@ const LongTermPlanning: FC = () => {
 						</BentoGridCardRight>
 					</BentoGridTopLayer>
 
+					<div className='h-6'></div>
+
 					<BentoGridWideCardWrapper>
 						<WideCard />
 					</BentoGridWideCardWrapper>

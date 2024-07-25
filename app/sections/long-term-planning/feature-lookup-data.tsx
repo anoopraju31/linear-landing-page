@@ -3,6 +3,7 @@ import CrossTerm from '@/assets/cross-team.svg'
 import Initiative from '@/assets/initiative.svg'
 import Insight from '@/assets/insight.svg'
 import Milestone from '@/assets/milestone.svg'
+import { TabHeaders } from './components/wide-card/tab-header'
 
 export const longTermFeatureLookup: FeatureLookupProps[] = [
 	{
@@ -28,5 +29,20 @@ export const longTermFeatureLookup: FeatureLookupProps[] = [
 		title: 'Progress insights',
 		description: 'Track scope, velocity, and progress over time.',
 		icon: <Insight />,
+	},
+]
+
+export const tabHeaders: TabHeaders[] = [
+	{
+		id: 'tab-header-1',
+		title: 'Collaborative documents',
+	},
+	{
+		id: 'tab-header-2',
+		title: 'Inline comments',
+	},
+	{
+		id: 'tab-header-3',
+		title: 'Text-to-issue commands',
 	},
 ]
