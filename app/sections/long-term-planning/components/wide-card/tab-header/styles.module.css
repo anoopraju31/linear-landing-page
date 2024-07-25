@@ -1,0 +1,11 @@
+.tab__header {
+	@apply col-start-1 col-end-5 text-[var(--color-text-quaternary)];
+}
+
+.tab__header .heading {
+	@apply mt-16 mb-6 text-[var(--color-text-primary)] text-balance text-2xl leading-[28px] tracking-[-0.47px] font-medium;
+}
+
+.toggle__header {
+	@apply flex flex-col gap-2;
+}
