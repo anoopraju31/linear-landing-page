@@ -14,3 +14,7 @@
 .customers .description__small__screen {
 	@apply md:hidden text-[var(--color-text-tertiary)] text-balance text-center text-[15px] leading-[23px] tracking-[-0.16px] font-medium mb-8;
 }
+
+.customers .customer__list__container {
+	@apply hidden md:block;
+}

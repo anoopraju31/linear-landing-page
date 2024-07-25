@@ -1,6 +1,7 @@
 import { type FC } from 'react'
 import styles from './styles.module.css'
 import LayoutWrapper from '@/components/layout-wrapper'
+import CustomerList from './components/customer-list'
 
 const Customers: FC = () => {
 	return (
@@ -18,6 +19,10 @@ const Customers: FC = () => {
 					Powering the world&lsquo;s best product teams. From next-gen startups
 					to established enterprises.
 				</p>
+
+				<div className={styles.customer__list__container}>
+					<CustomerList />
+				</div>
 			</LayoutWrapper>
 		</section>
 	)
