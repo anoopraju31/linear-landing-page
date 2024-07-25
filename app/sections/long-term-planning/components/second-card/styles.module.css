@@ -1,0 +1,137 @@
+.project__update__card {
+	@apply aspect-[432/320] max-w-full max-h-full overflow-hidden w-full contain-strict isolate select-none;
+	--base-x: 10%;
+	--base-z: 180px;
+	--y: 0;
+	--c: 40;
+	--z: 0;
+	--green: #68cc58;
+	--green-dim: #68cc5840;
+	--orange: #f2994a;
+	--orange-dim: #f2994a40;
+	--red: #c52828;
+	--red-dim: #c5282840;
+}
+
+.project__update__card::after {
+	@apply content-[''] pointer-events-none absolute inset-0 z-[1];
+	background: linear-gradient(
+			to bottom,
+			var(--color-bg-primary) 0,
+			transparent 30%
+		),
+		linear-gradient(to right, transparent 60%, var(--color-bg-primary) 100%);
+}
+
+.project__update__card .inner__container {
+	@apply w-full h-full;
+	perspective: 2000px;
+	perspective-origin: 50%;
+}
+
+.update__card {
+	@apply absolute inset-0 m-auto h-fit w-[500px] isolate contain-paint overflow-hidden whitespace-nowrap backdrop-blur-[10px] rounded-2xl p-4 border border-[hsla(0,0%,100%,0.1)];
+	transform: skewY(-4deg) rotateX(-14deg) rotateY(20deg) translateZ(var(--z))
+		translateX(var(--x)) translateY(var(--y));
+	transform-style: preserve-3d;
+	transition: 0.32s var(--ease-out-quad);
+	transition-property: transform, background;
+}
+
+.update__card:first-child {
+	--x: calc(var(--base-x) + 3%);
+	--z: calc(-1 * var(--base-z));
+	--y: -40%;
+	background: rgba(var(--c), var(--c), var(--c), 0.2);
+}
+
+.update__card:first-child:hover {
+	--y: -40%;
+}
+
+.update__card:nth-child(2) {
+	--x: var(--base-x);
+	--z: 0;
+	--y: -20%;
+	-webkit-backdrop-filter: blur(16px);
+	backdrop-filter: blur(16px);
+	background: rgba(var(--c), var(--c), var(--c), 0.2);
+}
+
+.update__card:nth-child(2):hover {
+	--y: -30%;
+}
+
+.update__card:last-child {
+	--x: calc(var(--base-x) - 3%);
+	--z: var(--base-z);
+	background: rgba(var(--c), var(--c), var(--c), 0.4);
+}
+
+.update__card:last-child:hover {
+	--y: -20%;
+}
+
+@media (max-width: 768px) {
+	.update__card,
+	.update__card:first-child {
+		--y: -15%;
+	}
+}
+
+.update__card .inner__container {
+	@apply opacity-20 grayscale text-[var(--color-text-primary)] transition-all duration-300;
+}
+
+.update__card:first-child:hover,
+.update__card:nth-child(2):hover,
+.update__card:last-child:hover {
+	@apply bg-[hsla(0,0%,100%,.08)];
+}
+
+.update__card:first-child:hover .inner__container,
+.update__card:nth-child(2):hover .inner__container,
+.update__card:last-child .inner__container {
+	@apply opacity-100 filter-none;
+}
+
+.update__card .badge__container {
+	@apply flex gap-2 items-center mb-2 font-medium;
+}
+
+.update__card:first-child .badge__container {
+	@apply text-[var(--red)];
+}
+
+.update__card:nth-child(2) .badge__container {
+	@apply text-[var(--orange)];
+}
+.update__card:last-child .badge__container {
+	@apply text-[var(--green)];
+}
+
+.project__update__card .badge__container svg {
+	@apply w-4 h-4 rounded-full;
+}
+
+.update__card:first-child .badge__container svg {
+	@apply fill-[var(--red)] bg-[var(--red-dim)];
+}
+.update__card:nth-child(2) .badge__container svg {
+	@apply fill-[var(--orange)] bg-[var(--orange-dim)];
+}
+.update__card:last-child .badge__container svg {
+	@apply fill-[var(--green)] bg-[var(--green-dim)];
+}
+
+.update__card .badge__container {
+	@apply flex gap-2 items-center;
+}
+
+.update__card .update__text {
+	@apply block text-[15px] leading-[23px] tracking-[-0.16px] mb-3 font-medium;
+}
+
+.update__card .update__time {
+	@apply block text-[15px] leading-[23px] tracking-[-0.16px] text-[var(--color-text-quaternary)];
+}
