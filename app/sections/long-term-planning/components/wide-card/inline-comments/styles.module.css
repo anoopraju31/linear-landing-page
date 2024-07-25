@@ -1,0 +1,93 @@
+.inline__comments {
+	@apply relative;
+}
+
+.inline__comments .icon__container {
+	--icon-text: rgba(104, 204, 88, 1);
+	--icon-bg: rgba(34, 54, 32, 0.5);
+
+	@apply mb-8 flex items-center justify-center w-9 h-9 bg-[var(--icon-bg)] text-[var(--icon-text)] rounded-lg;
+}
+
+.inline__comments .icon__container::after {
+	@apply content-[''] absolute inset-0;
+	background: linear-gradient(
+		to bottom,
+		transparent 80%,
+		var(--color-bg-primary) 97%
+	);
+}
+.inline__comments .heading {
+	@apply block mb-4 text-[17px] leading-[24px] tracking-[-0.22px] font-medium text-[var(--color-text-primary)];
+}
+
+.inline__comments .paragraph {
+	@apply block mb-6 text-balance text-[var(--color-text-tertiary)] text-[15px] leading-[23px] tracking-[-0.12px];
+}
+
+.inline__comments .paragraph .comment__mark {
+	@apply relative overflow-hidden bg-[#897844] text-white border-b border-[#c2a955];
+	padding-inline: 2px;
+	margin-inline: -2px;
+}
+
+.comment__popup {
+	@apply absolute top-[calc(100%+4px)] right-0 flex flex-col border border-[var(--color-border-secondary)] bg-[var(--color-bg-tertiary)] text-[var(--color-text-primary)] rounded-md min-w-[227px];
+	box-shadow: var(--shadow-medium);
+}
+
+.comment__popup .comment__container {
+	@apply flex flex-col p-3 gap-2;
+}
+
+.comment__popup .comment__top__container {
+	@apply flex gap-2 items-center;
+}
+
+.comment__popup .comment__top__container .img__container {
+	@apply flex relative items-center justify-center aspect-square w-4 h-4;
+}
+
+.comment__popup .comment__top__container .img__container img {
+	@apply flex-shrink-0 rounded-full w-full h-full pointer-events-none;
+}
+
+.comment__popup .comment__top__container .username {
+	@apply text-[13px] leading-[19px] tracking-[-0.12px] font-medium text-[var(--color-text-primary)];
+}
+
+.comment__popup .comment__top__container .time {
+	@apply text-[13px] leading-[19px] tracking-[-0.12px] text-[var(--color-text-tertiary)];
+}
+
+.comment__popup .comment__top__container .controls {
+	@apply flex items-center ml-auto gap-2;
+}
+
+.comment__popup .comment__top__container .controls .button {
+	@apply w-6 inline-flex justify-center items-center;
+}
+
+.comment__popup .comment__top__container .user__comment {
+	@apply text-sm leading-[21px] tracking-[-0,18px];
+}
+
+.comment__popup .seperator {
+	@apply h-[1px] bg-[var(--color-border-secondary)] w-full rounded-full;
+}
+
+.comment__popup .reply__container {
+	@apply p-3 flex items-center gap-2;
+}
+
+.comment__popup .reply__container .reply__user__img__container {
+	@apply flex relative items-center justify-center w-[14px] h-[14px] aspect-square;
+}
+
+.comment__popup .reply__container .reply__user__img__container img {
+	@apply flex-shrink-0 w-full h-full pointer-events-none rounded-full;
+}
+
+.comment__popup .reply__container .reply__user {
+	@apply text-[13px] leading-[19px] tracking-[-0.12px] text-[var(--color-text-quaternary)];
+}
