@@ -1,0 +1,146 @@
+.project__overview__card {
+	@apply select-none max-w-full max-h-full overflow-hidden w-full aspect-[432/320];
+
+	--mask-bottom: linear-gradient(
+		to bottom,
+		var(--mask-visible) 50%,
+		var(--mask-invisible) 100%
+	);
+	--mask-right: linear-gradient(
+		to right,
+		var(--mask-visible) 20%,
+		var(--mask-invisible) 100%
+	);
+
+	mask-image: var(--mask-bottom), var(--mask-right);
+	mask-composite: intersect;
+}
+
+.project__overview__card .outter__container {
+	@apply w-full h-full relative p-2 rounded-[18px];
+
+	--gradientBorder-gradient: linear-gradient(
+		to bottom right,
+		hsla(0, 0%, 100%, 0.07),
+		transparent
+	);
+}
+
+.project__overview__card .outter__container::before {
+	@apply content-[''] pointer-events-none select-none absolute top-0 left-0 right-0 bottom-0 rounded-[18px] bg-[var(--gradientBorder-gradient)] p-[1px];
+
+	mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+	mask-composite: exclude;
+}
+
+.project__overview__card .inner__container {
+	@apply h-full py-8 px-6 relative overflow-hidden isolate rounded-[10px];
+
+	--gradientBorder-size: 1px;
+	--gradientBorder-gradient: linear-gradient(
+		to bottom right,
+		hsla(0, 0%, 100%, 0.17),
+		transparent
+	);
+	background: linear-gradient(
+		134deg,
+		hsla(0, 0%, 100%, 0.08),
+		hsla(0, 0%, 100%, 0.02),
+		hsla(0, 0%, 100%, 0) 55%
+	);
+}
+
+.project__overview__card .inner__container::before {
+	@apply content-[''] pointer-events-none select-none absolute top-0 left-0 right-0 bottom-0 rounded-[18px] p-[1px] bg-[var(--gradientBorder-gradient)];
+
+	mask: linear-gradient(#000, #000) content-box, linear-gradient(#000, #000);
+	mask-composite: exclude;
+}
+
+.project__overview__card .inner__container::after {
+	@apply content-[''] pointer-events-none absolute inset-0 mix-blend-overlay opacity-10;
+}
+
+.project__overview__card .heading {
+	@apply text-[21px] leading-7 tracking-[-0.37px] font-medium text-[var(--color-text-primary)] mb-[22px];
+}
+
+.project__overview__card .definition__list {
+	@apply flex flex-col gap-4 min-w-0;
+}
+
+.project__overview__card .definition__list .list__item__container {
+	@apply flex items-center min-w-0;
+}
+
+.project__overview__card .definition__list .list__label {
+	@apply text-sm text-[var(--color-text-tertiary)] leading-[21px] tracking-[-0.18px] font-medium min-w-[108px];
+}
+
+.project__overview__card .definition__list .list__data {
+	@apply pl-[6px] whitespace-nowrap;
+}
+
+.project__overview__card .definition__list .list__data .first__data__row {
+	@apply flex items-center gap-4;
+}
+
+.definition__list .first__data__row .item {
+	@apply flex items-center gap-1;
+}
+
+.definition__list .first__data__row .item__text {
+	@apply text-[var(--color-text-secondary)] text-sm leading-[21px] tracking-[-0.18px] font-medium;
+}
+
+.definition__list .list__data .first__data__row .item__group {
+	@apply flex items-center;
+}
+
+.definition__list .list__data .first__data__row .item__group .profile {
+	@apply flex relative items-center justify-center aspect-square w-[18px] h-[18px];
+}
+
+.definition__list
+	.list__data
+	.first__data__row
+	.item__group
+	.profile:not(:first-child) {
+	@apply ml-[-6px];
+}
+
+.definition__list .list__data .first__data__row .item__group .profile img {
+	@apply rounded-full w-full h-full pointer-events-none flex-shrink-0;
+}
+
+.definition__list .first__data__row .data__button {
+	@apply flex items-center gap-1 py-[2px] px-[6px] bg-[var(--color-bg-tertiary)] rounded-md whitespace-nowrap;
+}
+
+.project__overview__card .definition__list .first__data__row {
+	@apply flex items-center gap-1;
+}
+
+.definition__list .list__item__container .list__data__rows {
+	@apply flex flex-col gap-4 mt-[2px];
+}
+
+.definition__list .list__item__container .list__data__rows .list__item__row {
+	@apply flex items-center gap-[6px];
+}
+
+.definition__list
+	.list__item__container
+	.list__data__rows
+	.list__item__row
+	span {
+	@apply text-[var(--color-text-secondary)] text-sm leading-[21px] tracking-[-0.18px] font-medium;
+}
+
+.definition__list
+	.list__item__container
+	.list__data__rows
+	.list__item__row
+	span.inner {
+	@apply text-[var(--color-text-tertiary)];
+}
