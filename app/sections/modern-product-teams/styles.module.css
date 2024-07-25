@@ -1,5 +1,5 @@
 .modern__product__teams {
-	@apply p-12 sm:py-[160px] isolate;
+	@apply py-12 sm:py-[160px] isolate;
 	background: linear-gradient(
 		180deg,
 		transparent,

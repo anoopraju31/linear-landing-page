@@ -1,0 +1,23 @@
+.carousel__container {
+	--Carousel-gap: 8px;
+	scroll-snap-type: x mandatory;
+	overflow: scroll hidden;
+	overscroll-behavior-x: contain;
+	scroll-snap-stop: always;
+	padding-block: calc(var(--focus-ring-width) + var(--focus-ring-offset));
+	scrollbar-width: none !important;
+}
+
+.carousel__inner__container {
+	@apply grid grid-flow-col gap-2 min-w-fit;
+}
+
+.carousel__inner__container::before,
+.carousel__inner__container::after {
+	content: '';
+	display: block;
+	--edge: calc((100vw - var(--page-max-width)) / 2);
+	--min-edge: calc(var(--edge) - var(--Carousel-gap));
+	--min-padding: calc(var(--page-padding-left) - var(--Carousel-gap));
+	min-width: max(var(--min-edge), var(--min-padding));
+}
