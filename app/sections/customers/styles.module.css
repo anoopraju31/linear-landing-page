@@ -1,0 +1,16 @@
+.customers {
+	padding-block: 64px;
+	display: block;
+}
+
+.customers .description__large__screen {
+	@apply hidden md:block text-center text-[21px] leading-[28px] tracking-[-0.37px] font-medium text-[var(--color-text-tertiary)] mb-8;
+}
+
+.customers .description__large__screen .highlight {
+	@apply text-[var(--color-text-primary)];
+}
+
+.customers .description__small__screen {
+	@apply md:hidden text-[var(--color-text-tertiary)] text-balance text-center text-[15px] leading-[23px] tracking-[-0.16px] font-medium mb-8;
+}
