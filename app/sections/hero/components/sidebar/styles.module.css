@@ -1,0 +1,29 @@
+.sidebar .top__container {
+	@apply flex items-center justify-between mb-[14px];
+	padding-inline: 4px;
+	transform-style: preserve-3d;
+}
+
+.sidebar .dot__container {
+	@apply flex items-center justify-center gap-2;
+	transform-style: preserve-3d;
+}
+
+.sidebar .dot__container > div {
+	@apply w-3 h-3 rounded-full bg-[#262626];
+}
+
+.sidebar .sidebar__header__container {
+	@apply flex justify-between items-center mb-3;
+	transform-style: preserve-3d;
+}
+
+.sidebar .illustrate__animate {
+	@apply flex;
+	transform-style: preserve-3d;
+}
+
+.sidebar .sidebar__dropdown__outter__container {
+	@apply flex flex-col gap-4;
+	transform-style: preserve-3d;
+}
