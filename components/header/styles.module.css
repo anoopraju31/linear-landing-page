@@ -1,0 +1,117 @@
+.header .header__blur__mask,
+.header .header__overlay {
+	@apply fixed pointer-events-none z-[calc(var(--layer-header)-1)];
+}
+
+.header .header__blur__mask {
+	@apply h-[calc(var(--header-height)+24px)] bg-[var(--header-bg)] backdrop-blur-[5px];
+	mask-image: linear-gradient(
+		to bottom,
+		var(--mask-on) 20%,
+		var(--mask-off) calc(100% - 20%)
+	);
+}
+
+.header .header__overlay {
+	@apply inset-0 backdrop-blur-md opacity-0 invisible;
+	transition: 0.24s cubic-bezier(0.4, 0, 0.6, 1);
+	transition-property: opacity, visibility;
+}
+
+.header .header__wrapper {
+	@apply block select-none isolate overflow-hidden fixed px-3 max-w-[var(--header-max-width)] z-[var(--layer-header)] bg-[var(hsla(0,0%,4%,.2))] backdrop-blur-xl backdrop-saturate-[140%] rounded-[var(--header-radius)];
+	--clip: inset(
+		0 0 calc(100% - var(--header-height) + var(--header-top)) 0 round
+			var(--header-radius)
+	);
+	inset: var(--header-top) 0;
+	margin-inline: auto;
+	width: calc(
+		100vw - (var(--page-padding-left) / 2) - (var(--page-padding-right) / 2)
+	);
+	transform: translateX(
+		calc(-1 * var(--removed-body-scroll-bar-size, 0px) / 2)
+	);
+	clip-path: var(--clip);
+	transition: 0.24s var(--ease-out-quad);
+	transition-property: clip-path, background;
+}
+
+.header .header__wrapper::before {
+	@apply content-[''] absolute pointer-events-none inset-0 border border-[var(--header-border)] rounded-[var(--header-radius)];
+	height: calc(var(--header-height) - var(--header-top));
+	will-change: height;
+	transition: inherit;
+	transition-property: height;
+}
+
+.header .header__root {
+	@apply flex flex-col w-full h-full sm:block;
+}
+
+.header .header__root .header__list {
+	@apply flex gap-4 sm:gap-0 justify-start sm:justify-between items-stretch;
+	min-height: calc(var(--header-height) - var(--header-top));
+}
+
+.header .header__root .header__list .header__logo {
+	@apply text-[var(--color-text-primary)];
+}
+
+.header .header__root .header__list .header__logo__link {
+	@apply flex justify-center items-center px-2 h-full;
+}
+
+.header .header__root .header__list .header__trigger,
+.header .header__root .header__list .header__item {
+	@apply text-[13px] font-medium text-[hsla(0,0%,100%,0.8)] transition-colors;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .header__root .header__list .header__item {
+	@apply whitespace-nowrap;
+}
+
+.header .header__root .header__list .header__link {
+	@apply px-2 md:px-3 lg:px-4 flex justify-center items-center h-full;
+}
+
+.header .header__root .header__list .header__button {
+	@apply flex items-center justify-center;
+}
+
+.header .button__login {
+	@apply bg-[var(--color-bg-quaternary)] text-[var(--color-text-primary)] shadow-[var(--shadow-stack-low)] font-medium text-[13px] h-6 gap-1 px-3 rounded-lg hover:brightness-125 transition-colors;
+}
+
+.header .button__signup {
+	@apply !text-[var(--color-bg-primary)] bg-[#e6e6e6] shadow-[var(--shadow-stack-low)] font-medium text-[13px] h-6 gap-1 px-3 rounded-lg hover:bg-[var(--color-text-primary)] transition-colors;
+}
+
+.header .header__root .header__list .header__login {
+	@apply ml-auto sm:ml-0 my-2;
+}
+
+.header .header__root .header__list .header__signup {
+	@apply my-2;
+}
+
+.header .header__kbd {
+	@apply bg-[var(--kbd-bg)] text-[var(--kbd-text)] h-fit;
+}
+
+.hide__mobile {
+	@apply hidden sm:block;
+}
+
+.hide__laptop {
+	@apply hidden lg:block;
+}
+
+.hide__tablet {
+	@apply hidden md:block;
+}
+
+.header__menu {
+	@apply sm:!hidden;
+}
