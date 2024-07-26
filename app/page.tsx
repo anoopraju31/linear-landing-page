@@ -1,4 +1,5 @@
 import { type FC } from 'react'
+import Hero from './sections/hero'
 import Customers from './sections/customers'
 import ModernProductTeams from './sections/modern-product-teams'
 import LongTermPlanning from './sections/long-term-planning'
@@ -10,6 +11,7 @@ import PreFooter from './sections/prefooter'
 const Home: FC = () => {
 	return (
 		<main className=' min-h-screen'>
+			<Hero />
 			<Customers />
 			<ModernProductTeams />
 			<LongTermPlanning />
