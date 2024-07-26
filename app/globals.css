@@ -23,6 +23,10 @@ body {
 	background: var(--color-bg-primary);
 }
 
+body::-webkit-scrollbar {
+	display: none;
+}
+
 :root {
 	--header-height: 64px;
 	--header-blur: 12px;

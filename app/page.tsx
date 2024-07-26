@@ -10,7 +10,7 @@ import PreFooter from './sections/prefooter'
 
 const Home: FC = () => {
 	return (
-		<main className=' min-h-screen'>
+		<main className=' min-h-screen pt-[calc(var(--header-top)+var(--header-height))]'>
 			<Hero />
 			<Customers />
 			<ModernProductTeams />
