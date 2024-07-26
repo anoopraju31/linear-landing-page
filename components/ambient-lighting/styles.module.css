@@ -1,0 +1,48 @@
+.ambient__lighting {
+	@apply absolute top-0 left-0 w-full h-screen pointer-events-none select-none;
+}
+
+.ambient__lighting .container {
+	@apply absolute inset-0 contain-strict isolate pointer-events-none select-none;
+	z-index: calc(var(--layer-header) - 1);
+}
+
+.ambient__lighting .light__a,
+.ambient__lighting .light__b {
+	@apply absolute rounded-full top-0 left-0 h-[1380px];
+}
+
+.ambient__lighting .light__a {
+	@apply w-[560px];
+	transform: translateY(-350px) rotate(-45deg);
+	background: radial-gradient(
+		68.54% 68.72% at 55.02% 31.46%,
+		hsla(0, 0%, 85%, 0.08) 0,
+		hsla(0, 0%, 55%, 0.02) 50%,
+		hsla(0, 0%, 45%, 0) 80%
+	);
+}
+
+.ambient__lighting .light__b {
+	@apply w-[240px];
+	transform: rotate(-45deg) translate(5%, -50%);
+	transform-origin: top left;
+	background: radial-gradient(
+		50% 50% at 50% 50%,
+		hsla(0, 0%, 85%, 0.06) 0,
+		hsla(0, 0%, 45%, 0.02) 80%,
+		transparent 100%
+	);
+}
+
+.ambient__lighting .light__c {
+	@apply absolute rounded-full top-0 left-0 w-[240px] h-[1380px];
+	transform: rotate(-45deg) translate(-180%, -70%);
+	transform-origin: top left;
+	background: radial-gradient(
+		50% 50% at 50% 50%,
+		hsla(0, 0%, 85%, 0.04) 0,
+		hsla(0, 0%, 45%, 0.02) 80%,
+		transparent 100%
+	);
+}
