@@ -16,5 +16,32 @@
 }
 
 .customers .customer__list__container {
-	@apply hidden md:block;
+	@apply hidden md:block relative;
+}
+
+.customers .link__container {
+	@apply opacity-0 transition-all duration-300;
+}
+
+.customers .customer__list__container:hover .link__container {
+	@apply opacity-100;
+}
+
+.customers .link__container {
+	@apply absolute left-0 right-0 top-0 bottom-0 w-full h-full flex justify-center items-center backdrop-blur-lg z-10;
+}
+
+.customers .link__container .link {
+	@apply flex items-center justify-center bg-[hsla(0,0%,100%,.1)] h-8 px-4 rounded-full gap-1 border border-[hsla(0,0%,100%,.1)] text-white scale-95 transition-all duration-300;
+}
+
+.customers .customer__list__container:hover .link__container .link {
+	@apply scale-100;
+}
+.customers .link__container .link__text {
+	@apply text-sm leading-[21px] tracking-[-0.18px] font-medium;
+}
+
+.customers .customer__marquee__container {
+	@apply md:hidden;
 }
